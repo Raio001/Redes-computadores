@@ -1,0 +1,73 @@
+1) Escreva um programa que recebe um vetor de 10 elementos do usuário e escreve a média dos valores no vetor.
+
+#include<stdio.h> 
+int main() 
+{ 
+//---------------------------------    
+ int numero, total = 0, media = 0; //variáveis 
+ printf("\n\t╔══════════════════════════╗");
+ printf("\n\tCalculo da média dos valores");
+ printf("\n\t╚══════════════════════════╝");
+ //---------------------------------
+     for(int i=0; i<10; i++){
+        printf("\nInsira o %dº o numero : ",i+1); 
+        scanf("%d", &numero); 
+        total = total + numero;
+//---------------------------------
+ } 
+//calculo da media
+media = total /10;
+printf("\t------------------Calculo da média------------------");
+printf("\n\tA média dos valores é :%d", media);
+
+ return 0;
+}
+
+
+
+2) Escreva um programa que recebe um vetor de 10 elementos do usuário e diz qual o maior número e qual o menor número do vetor
+
+#include<stdio.h> 
+int main() 
+{ 
+ int numero, n_maior, n_menor; //variáveis 
+ int i; 
+ 
+printf("\n\t╔════════════════════════════╗");
+printf("\n\tCalculo do menor e maior número");
+printf("\n\t╚═════════════════════════════╝");
+ printf("\n\nEntre com o 1º numero : "); 
+ scanf("%d", &numero); 
+ 
+ n_maior=numero; 
+ n_menor=numero; 
+ 
+    for(i=1; i<10; i++){
+        
+        printf("\nEntre com o %dº o numero : ",i+1); 
+        scanf("%d", &numero); 
+        if(numero>n_maior) 
+        n_maior=numero; 
+        else 
+        if(numero<n_menor) 
+        n_menor=numero; 
+ } 
+//resultado 
+ printf("\nO menor número entrado é: %d", n_menor); 
+ printf("\nO maior número entrado é: %d", n_maior); 
+ return 0;
+}
+
+3) Faça um programa que preencha dois vetores, X e Y, com dez números inteiros cada. Calcule e mostre a união de X com Y. 
+Isto é, um vetor que contenha os valores de X seguidos dos valores de Y.
+
+
+
+
+
+
+4) Faça um programa que preencha um vetor com oito números inteiros, calcule e mostre dois vetores resultantes. 
+O primeiro vetor resultante deve conter os números positivos; 
+o segundo deve conter os números negativos. 
+
+Cada vetor resultante vai ter, no máximo, oito posições, que poderão não ser completamente utilizadas.
