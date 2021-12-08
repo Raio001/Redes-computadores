@@ -62,12 +62,85 @@ printf("\n\t╚═════════════════════�
 Isto é, um vetor que contenha os valores de X seguidos dos valores de Y.
 
 
+#include <stdio.h> 
+#define TAM 10
 
+
+
+void main(void)
+
+{ 
+
+ printf("\n\t╔══════════════════════════╗");
+ printf("\n\t Calculo da união de x e y");
+ printf("\n\t╚══════════════════════════╝");    
+
+    int x[TAM], y[TAM], tam2 = 2 * TAM, xy[tam2];
+   printf("\nDigite 10 valores para x e y");
+    for (int i = 0; i <TAM; i++){
+        printf("\nDigite 10 valores para x %dº número:  ", i+1);
+        scanf("%d", &x[i]);
+    } 
+
+    for (int i = 0; i <TAM; i++){ 
+        printf("Digite 10 valores para y %dº número:  ", i+1);
+        scanf("%d", &y[i]);
+        
+    }
+
+    for (int i = 0; i < TAM;i++){ 
+        xy[i] = x[i]; 
+        xy[i+10] = y[i];
+        
+    }
+
+    printf("Resultado: "); 
+    for (int i = 0; i< tam2; i++){ 
+        printf("%d\n", xy[i]);
+    }
+
+}
 
 
 
 4) Faça um programa que preencha um vetor com oito números inteiros, calcule e mostre dois vetores resultantes. 
 O primeiro vetor resultante deve conter os números positivos; 
 o segundo deve conter os números negativos. 
-
 Cada vetor resultante vai ter, no máximo, oito posições, que poderão não ser completamente utilizadas.
+
+
+
+#include <stdio.h>
+
+int main()
+{
+
+ printf("\n\t╔══════════════════════════╗");
+ printf("\n\t    Calculos de vetores");
+ printf("\n\t╚══════════════════════════╝");
+ 
+int numeros[8],positivos[8], negativos[8];
+printf("Insire 8 números\n");
+    
+    for (int i = 0; i<8; i++){
+        printf("Insira números %d: ", i+1);
+        scanf("%d", &numeros[i]);
+    }
+    
+    for (int i = 0 ; i< 8; i++){
+        if(numeros[i] > 0){
+            positivos[i] = numeros[i];
+            printf("%d\n", positivos[i]);
+        }
+    }
+    
+    for (int i = 0 ; i< 8; i++){
+        if(numeros[i] < 0){
+            negativos[i] = numeros[i];
+            printf("\n%d", negativos[i]);
+        }
+    }
+    
+
+    return 0;
+}
